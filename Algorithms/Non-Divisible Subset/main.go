@@ -4,9 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-
-	//"os"
-	//"strconv"
+	"os"
+	"strconv"
 	"strings"
 )
 
@@ -52,7 +51,7 @@ func nonDivisibleSubset(k int32, s []int32) int32 {
 }
 
 func main() {
-	/*reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
+	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -80,15 +79,13 @@ func main() {
 		checkError(err)
 		sItem := int32(sItemTemp)
 		s = append(s, sItem)
-	}*/
+	}
 
-	k, s := int32(3), []int32{1, 7, 2, 4}
 	result := nonDivisibleSubset(k, s)
-	fmt.Println(result)
 
-	/*fmt.Fprintf(writer, "%d\n", result)
+	fmt.Fprintf(writer, "%d\n", result)
 
-	writer.Flush()*/
+	writer.Flush()
 }
 
 func readLine(reader *bufio.Reader) string {
